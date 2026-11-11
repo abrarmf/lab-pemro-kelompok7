@@ -32,15 +32,17 @@ Tahap 1 ada di tab "Tab 1", dan Tahap 2 ada di tab "Tahap 2".
 
 Ke-50 masalah dinilai dengan lima kriteria (solusi produk, kemauan membayar, ruang dari pesaing, bukti pasar, dan kemudahan diiklankan), masing-masing berskala 1 sampai 5. Hasilnya: 5 masalah layak, 19 dapat dipertimbangkan, dan 26 kurang layak.
 
-Lima masalah yang layak diusulkan menjadi produk Tahap 3:
+Setelah diskusi, setiap anggota mengusulkan satu ide, dan lima produk berikut dipilih untuk Tahap 3:
 
-| No | Usulan produk | Skor (dari 25) |
+| No | Produk pilihan kelompok | Skor (dari 25) |
 |---|---|---|
 | 33 | Bank responden skripsi | 21 |
 | 45 | Manajemen kos untuk pemilik | 20 |
 | 1 | Visibilitas digital UMKM | 19 |
 | 7 | Form pre-order dan rekap pesanan | 19 |
-| 31 | Sewa barang antarwarga dan mahasiswa | 18 |
+| 46 | Langganan laundry dan bersih kamar kos | 17 |
+
+Langganan laundry dan bersih kamar berskor 17 karena butuh mitra laundry dan petugas kebersihan di lapangan, tetapi dipilih karena pendapatannya berulang setiap minggu. Sewa barang antarwarga dan mahasiswa (no. 31, skor 18) menjadi cadangan pertama.
 
 Rincian skor, pesaing, dan rencana validasi ada di tab "Tahap 2" pada Google Docs.
 
