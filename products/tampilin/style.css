@@ -1,0 +1,22 @@
+:root {
+  --brand: #ea580c;
+  --brand-ink: #c2410c;
+  --brand-soft: #fff1e8;
+  --accent: #0ea5e9;
+  --bg-alt: #fbf7f4;
+}
+.hero { background: radial-gradient(900px 420px at 90% 0%, #ffe4d1 0%, transparent 60%); }
+.score-ring { width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; margin: 0 auto 12px; background: conic-gradient(var(--brand) calc(var(--v) * 1%), var(--brand-soft) 0); }
+.score-ring > div { width: 118px; height: 118px; border-radius: 50%; background: #fff; display: grid; place-items: center; text-align: center; }
+.score-ring b { font-size: 2.2rem; font-weight: 800; line-height: 1; }
+.check-item { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; cursor: pointer; }
+.check-item input { width: 20px; height: 20px; margin-top: 2px; flex: none; accent-color: var(--brand); }
+.check-item span { font-weight: 600; }
+.check-item small { display: block; color: var(--muted); font-weight: 400; }
+.output { white-space: pre-wrap; background: var(--bg-alt); border: 1px solid var(--line); border-radius: 12px; padding: 14px; font-size: .92rem; overflow-wrap: anywhere; }
+.preview-frame { width: 100%; height: 560px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+.mock-phone { max-width: 300px; margin: 0 auto; border: 10px solid #1f1f2b; border-radius: 34px; overflow: hidden; background: #fff8f3; box-shadow: var(--shadow); }
+.mock-phone .inner { padding: 22px 18px; text-align: center; }
+.mock-phone .avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--brand); color: #fff; font-weight: 800; font-size: 1.6rem; display: grid; place-items: center; margin: 0 auto 10px; }
+.mock-phone .link-btn { display: block; background: #fff; border: 1.5px solid var(--line); border-radius: 12px; padding: 11px; margin: 8px 0; font-weight: 700; font-size: .9rem; }
+.mock-phone .link-btn.primary { background: #16a34a; color: #fff; border-color: #16a34a; }

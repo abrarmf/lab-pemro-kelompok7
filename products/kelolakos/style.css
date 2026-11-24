@@ -1,0 +1,17 @@
+:root {
+  --brand: #0f766e;
+  --brand-ink: #115e59;
+  --brand-soft: #e6f6f4;
+  --accent: #f97316;
+  --bg-alt: #f4f8f7;
+}
+.hero { background: linear-gradient(180deg, #ecfdf9 0%, #fff 100%); }
+.mock-app { border-radius: 18px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); background: #fff; }
+.mock-app .bar { background: var(--brand); color: #fff; padding: 14px 18px; font-weight: 700; display: flex; justify-content: space-between; }
+.mock-app .body { padding: 16px 18px; display: grid; gap: 10px; }
+.mock-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; font-size: .9rem; }
+.chart { display: flex; align-items: flex-end; gap: 8px; height: 200px; padding: 12px 4px 0; border-bottom: 1px solid var(--line); }
+.chart .bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 6px; height: 100%; min-width: 0; }
+.chart .bar-fill { width: 100%; max-width: 40px; background: var(--brand); border-radius: 6px 6px 0 0; min-height: 2px; }
+.chart .bar-lbl { font-size: .72rem; color: var(--muted); }
+.actions { display: flex; gap: 6px; flex-wrap: wrap; }

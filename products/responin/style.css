@@ -1,0 +1,18 @@
+:root {
+  --brand: #4f46e5;
+  --brand-ink: #3730a3;
+  --brand-soft: #eef2ff;
+  --accent: #f59e0b;
+  --bg-alt: #f6f6fc;
+}
+.hero { background: radial-gradient(1200px 500px at 85% -10%, #e0e7ff 0%, transparent 60%); }
+.mock-survey { position: relative; }
+.mock-survey .card { padding: 20px; }
+.mock-survey .float { position: absolute; right: -12px; bottom: -22px; width: 210px; }
+@media (max-width: 880px) { .mock-survey .float { position: static; width: auto; margin-top: 14px; } }
+.progress { height: 10px; border-radius: 999px; background: var(--brand-soft); overflow: hidden; }
+.progress > i { display: block; height: 100%; background: var(--brand); border-radius: 999px; }
+.points-pill { display: inline-flex; align-items: center; gap: 6px; background: #fff7e6; color: #92400e; font-weight: 800; padding: 7px 12px; border-radius: 999px; border: 1px solid #fde68a; font-size: .9rem; }
+.survey-card h3 { margin-bottom: 6px; }
+.survey-meta { display: flex; flex-wrap: wrap; gap: 14px; font-size: .85rem; color: var(--muted); margin: 8px 0 12px; }
+.code-box { font-family: ui-monospace, Menlo, monospace; font-weight: 700; letter-spacing: .08em; background: var(--bg-alt); border: 1.5px dashed var(--line); padding: 10px 14px; border-radius: 10px; display: inline-block; }

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responin: Dasbor</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../_shared/base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-shell">
+  <nav class="nav">
+    <div class="container">
+      <a class="logo" href="./"><span class="logo-mark">R</span>Responin</a>
+      <div class="nav-links">
+        <span class="points-pill" id="poin-pill">0 poin</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="app-main">
+    <div class="container">
+      <div class="demo-banner">Versi uji coba: profil, poin, dan survei tersimpan di perangkat ini. Survei yang kamu pasang dikirim ke tim Responin lewat WhatsApp untuk disebarkan ke panel responden.</div>
+
+      <section id="onboarding" class="hidden">
+        <div class="card" style="max-width:620px;margin:0 auto">
+          <h2>Lengkapi profil respondenmu</h2>
+          <p class="muted">Profil dipakai untuk mencocokkan survei yang kriterianya sesuai denganmu. Pengguna baru mendapat <b id="poin-awal"></b> poin.</p>
+          <form id="profile-form">
+            <div class="field-row">
+              <div class="field"><label for="p-nama">Nama panggilan</label><input id="p-nama" name="nama" required maxlength="40"></div>
+              <div class="field"><label for="p-usia">Usia</label><input id="p-usia" name="usia" type="number" min="15" max="80" required></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="p-domisili">Kota domisili</label><input id="p-domisili" name="domisili" required placeholder="Semarang"></div>
+              <div class="field"><label for="p-kampus">Kampus (opsional)</label><input id="p-kampus" name="kampus" placeholder="Universitas Diponegoro"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="p-jurusan">Jurusan</label><input id="p-jurusan" name="jurusan" required placeholder="Bisnis Digital"></div>
+              <div class="field">
+                <label for="p-profesi">Profesi</label>
+                <select id="p-profesi" name="profesi" required>
+                  <option>Mahasiswa</option><option>Pelajar</option><option>Karyawan swasta</option><option>PNS</option><option>Wirausaha</option><option>Freelancer</option><option>Ibu rumah tangga</option><option>Lainnya</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">Simpan dan mulai</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="dashboard" class="hidden">
+        <div class="panel-title">
+          <div>
+            <h2 id="hello">Halo</h2>
+            <div class="small muted" id="profile-line"></div>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="edit-profile">Ubah profil</button>
+        </div>
+
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="isi">Isi survei</button>
+          <button class="tab" data-tab="pasang">Pasang survei</button>
+          <button class="tab" data-tab="saya">Survei saya</button>
+          <button class="tab" data-tab="riwayat">Riwayat poin</button>
+        </div>
+
+        <div data-panel="isi">
+          <p class="muted small">Menampilkan survei yang kriterianya cocok dengan profilmu. Selesaikan survei, masukkan kode penyelesaian, dan poin langsung masuk.</p>
+          <div class="list" id="survey-list"></div>
+        </div>
+
+        <div data-panel="pasang" class="hidden">
+          <div class="card">
+            <h3>Pasang kuesioner baru</h3>
+            <form id="survey-form">
+              <div class="field"><label for="s-judul">Judul penelitian</label><input id="s-judul" required maxlength="140" placeholder="Pengaruh Social Commerce terhadap Minat Beli Gen Z"></div>
+              <div class="field"><label for="s-link">Tautan kuesioner</label><input id="s-link" type="url" required placeholder="https://forms.gle/..."></div>
+              <div class="field-row">
+                <div class="field"><label for="s-menit">Estimasi durasi (menit)</label><input id="s-menit" type="number" min="1" max="60" value="7" required></div>
+                <div class="field"><label for="s-target">Target responden</label><input id="s-target" type="number" min="5" max="1000" value="50" required></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label for="s-usia-min">Usia minimal</label><input id="s-usia-min" type="number" min="15" max="80" value="18"></div>
+                <div class="field"><label for="s-usia-max">Usia maksimal</label><input id="s-usia-max" type="number" min="15" max="80" value="25"></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label for="s-domisili">Domisili</label><input id="s-domisili" placeholder="Kosongkan bila bebas. Contoh: Semarang, Solo"></div>
+                <div class="field"><label for="s-jurusan">Jurusan</label><input id="s-jurusan" placeholder="Kosongkan bila bebas"></div>
+              </div>
+              <div class="field">
+                <label for="s-profesi">Profesi</label>
+                <select id="s-profesi"><option value="">Bebas</option><option>Mahasiswa</option><option>Pelajar</option><option>Karyawan swasta</option><option>PNS</option><option>Wirausaha</option><option>Freelancer</option><option>Ibu rumah tangga</option></select>
+              </div>
+              <div class="card flat" style="background:var(--bg-alt);margin-bottom:14px">
+                <div class="row-item"><span>Imbalan per responden</span><b id="cost-per">2 poin</b></div>
+                <div class="row-item"><span>Total poin dibutuhkan</span><b id="cost-total">100 poin</b></div>
+                <div class="row-item small muted"><span>Saldo poinmu</span><span id="cost-saldo">0 poin</span></div>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit">Pasang dengan poin</button>
+            </form>
+          </div>
+        </div>
+
+        <div data-panel="saya" class="hidden"><div class="list" id="my-list"></div></div>
+
+        <div data-panel="riwayat" class="hidden"><div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>Keterangan</th><th class="num">Poin</th></tr></thead><tbody id="history-body"></tbody></table></div></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="../_shared/kit.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

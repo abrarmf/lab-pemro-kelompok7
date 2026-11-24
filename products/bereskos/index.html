@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BeresKos: Langganan Laundry dan Bersih Kamar Kos</title>
+  <meta name="description" content="Langganan laundry dan bersih kamar per gedung kos untuk mahasiswa. Jadwal otomatis setiap minggu, tanpa pesan ulang.">
+  <meta property="og:title" content="BeresKos: Langganan Laundry dan Bersih Kamar">
+  <meta property="og:description" content="Cucian dan kamar beres tiap minggu, kamu fokus skripsi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../_shared/base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <a class="logo" href="./"><span class="logo-mark">B</span>BeresKos</a>
+      <div class="nav-links">
+        <a href="#cara-kerja">Cara kerja</a>
+        <a href="#harga">Harga</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary btn-sm" href="#daftar">Daftarkan kos</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Langganan per gedung kos · <span data-area></span></span>
+        <h1>Cucian dan kamar beres tiap minggu, kamu fokus skripsi.</h1>
+        <p class="lead">Laundry dijemput dan diantar, kamar dibersihkan, semuanya dengan jadwal tetap setiap minggu. Tidak perlu pesan ulang, cukup <b><span data-harga></span> per minggu</b>.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="#daftar" data-cta="hero">Daftarkan gedung kosmu</a>
+          <a class="btn btn-ghost btn-lg" href="app.html">Lihat jadwal mingguan</a>
+        </div>
+        <p class="hero-note">Dibuka bertahap per gedung kos, minimal <span data-min></span> kamar ikut berlangganan.</p>
+      </div>
+      <div class="card">
+        <div class="row-item"><b>Jadwal mingguan gedungmu</b><span class="badge">Otomatis</span></div>
+        <div class="week" style="margin-top:14px" id="hero-week"></div>
+        <div class="week-legend">🧺 Jemput cucian · 👕 Antar cucian · 🧹 Bersih kamar</div>
+        <p class="small muted" style="margin:14px 0 0">Jadwal sama setiap minggu. Mau melewatkan satu minggu? Cukup kabari lewat WhatsApp.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Masalahnya</span>
+        <h2>Saat skripsi dan magang, cucian dan kamar yang paling dulu terbengkalai</h2>
+        <p class="muted">Energi habis untuk kampus dan kantor. Cucian menumpuk, kamar kotor, dan dampaknya terasa ke kesehatan, fokus belajar, dan pengeluaran.</p>
+      </div>
+      <div class="table-wrap" style="max-width:820px;margin:0 auto">
+        <table class="compare">
+          <thead><tr><th></th><th>Laundry kiloan biasa</th><th>Cleaning service panggilan</th><th>BeresKos</th></tr></thead>
+          <tbody>
+            <tr><td>Antar-jemput</td><td>Bawa sendiri atau pesan tiap kali</td><td>-</td><td>Otomatis tiap minggu</td></tr>
+            <tr><td>Bersih kamar</td><td>Tidak termasuk</td><td>Pesan per kunjungan</td><td>Termasuk, seminggu sekali</td></tr>
+            <tr><td>Pesan ulang</td><td>Setiap kali</td><td>Setiap kali</td><td>Tidak perlu</td></tr>
+            <tr><td>Petugas</td><td>-</td><td>Berganti-ganti</td><td>Petugas tetap per gedung</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cara-kerja">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Cara kerja</span><h2>Daftar sekali, beres setiap minggu</h2></div>
+      <div class="grid grid-3">
+        <div class="card"><div class="step-num">1</div><h3>Ajak teman satu kos</h3><p class="muted">Layanan dibuka per gedung supaya jadwal dan petugasnya efisien. Kumpulkan minimal <span data-min></span> kamar, lalu daftarkan gedungmu.</p></div>
+        <div class="card"><div class="step-num">2</div><h3>Jadwal langsung berjalan</h3><p class="muted">Cucian dijemput di hari yang sama setiap minggu dan diantar kembali dua hari kemudian. Kamar dibersihkan di akhir pekan.</p></div>
+        <div class="card"><div class="step-num">3</div><h3>Bayar per minggu</h3><p class="muted">Tidak ada kontrak panjang. Lewati minggu saat pulang kampung, cukup kabari sebelum hari jemput.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="harga">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Harga</span><h2>Satu paket, semua beres</h2></div>
+      <div class="card price-card featured" style="max-width:460px;margin:0 auto">
+        <h3>Paket Mingguan</h3>
+        <div class="price"><span data-harga></span> <span>/ minggu per kamar</span></div>
+        <ul class="check-list">
+          <li>Laundry kiloan hingga <span data-kg></span> kg per minggu, dicuci, dikeringkan, dan dilipat</li>
+          <li>Jemput dan antar cucian ke kamar</li>
+          <li>Bersih kamar seminggu sekali: sapu, pel, buang sampah, rapikan kasur</li>
+          <li>Jadwal tetap tanpa pesan ulang</li>
+          <li>Bisa melewatkan minggu tertentu</li>
+        </ul>
+        <a class="btn btn-primary btn-block" href="#daftar">Daftarkan gedung kos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="daftar">
+    <div class="container" style="max-width:720px">
+      <div class="section-head"><span class="eyebrow">Daftar</span><h2>Daftarkan gedung kosmu</h2><p class="muted">Isi data di bawah. Tim BeresKos akan menghubungimu lewat WhatsApp untuk mengatur jadwal pertama.</p></div>
+      <form class="card" id="daftar-form">
+        <div class="field-row">
+          <div class="field"><label for="d-nama">Nama kamu</label><input id="d-nama" required></div>
+          <div class="field"><label for="d-hp">No. WhatsApp</label><input id="d-hp" required inputmode="tel" placeholder="0812..."></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="d-kos">Nama kos</label><input id="d-kos" required placeholder="Kos Putri Anggrek"></div>
+          <div class="field"><label for="d-kamar">Jumlah kamar yang berminat</label><input id="d-kamar" type="number" min="1" max="200" value="5" required></div>
+        </div>
+        <div class="field"><label for="d-alamat">Alamat kos</label><input id="d-alamat" required placeholder="Jl. Banjarsari Selatan, Tembalang"></div>
+        <div class="field"><label for="d-peran">Kamu sebagai</label><select id="d-peran"><option>Penghuni kos</option><option>Pemilik atau pengelola kos</option></select></div>
+        <button class="btn btn-primary btn-block btn-lg" type="submit">Kirim pendaftaran lewat WhatsApp</button>
+        <p class="small muted center" style="margin:12px 0 0">Belum cukup <span data-min></span> kamar? Tetap daftar, kami kabari saat gedungmu bisa dibuka.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section alt" id="faq">
+    <div class="container" style="max-width:760px">
+      <div class="section-head"><h2>Pertanyaan yang sering muncul</h2></div>
+      <div class="faq">
+        <details><summary>Bagaimana dengan privasi kamar saya?</summary><p>Kamar hanya dibersihkan sesuai jadwal yang kamu setujui, oleh petugas tetap yang identitasnya kami kirimkan lebih dulu. Kamu boleh memilih kamar dibersihkan saat kamu ada di tempat.</p></details>
+        <details><summary>Kalau cucian saya lebih dari kuota?</summary><p>Kelebihan berat dihitung sesuai tarif laundry kiloan mitra kami dan diinformasikan sebelum ditagih.</p></details>
+        <details><summary>Bagaimana kalau saya pulang kampung?</summary><p>Kabari lewat WhatsApp atau halaman jadwal sebelum hari jemput. Minggu itu tidak ditagih.</p></details>
+        <details><summary>Kenapa harus minimal beberapa kamar per gedung?</summary><p>Supaya petugas bisa melayani beberapa kamar dalam satu kunjungan. Dengan begitu harga per kamar tetap terjangkau.</p></details>
+        <details><summary>Siapa yang mencuci pakaian saya?</summary><p>Mitra laundry kiloan di sekitar kos yang bekerja sama dengan BeresKos, dengan cucian tiap kamar dipisah dalam kantong bertanda.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© <span data-year></span> BeresKos, produk Kelompok 7 Lab Pemrograman, Bisnis Digital Undip.</span>
+      <a href="../../">Produk lain dari Kelompok 7</a>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="../_shared/kit.js"></script>
+  <script src="shared.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      Beres.fillConfig();
+      Kit.$("#hero-week").innerHTML = Beres.weekHtml(-1);
+      Kit.$("#daftar-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var v = function (id) { return Kit.$(id).value.trim(); };
+        var msg = "Halo BeresKos, saya mau mendaftarkan gedung kos.\n\nNama: " + v("#d-nama") + "\nNo. WhatsApp: " + v("#d-hp") +
+          "\nPeran: " + v("#d-peran") + "\nNama kos: " + v("#d-kos") + "\nAlamat: " + v("#d-alamat") + "\nJumlah kamar berminat: " + v("#d-kamar");
+        Kit.openWa(msg, "Lead", { kamar: Number(v("#d-kamar")) });
+      });
+    });
+  </script>
+</body>
+</html>

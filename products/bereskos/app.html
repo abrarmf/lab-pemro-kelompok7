@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BeresKos: Jadwal Mingguan</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../_shared/base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-shell">
+  <nav class="nav">
+    <div class="container">
+      <a class="logo" href="./"><span class="logo-mark">B</span>BeresKos</a>
+      <div class="nav-links"><a class="btn btn-soft btn-sm" href="./#daftar">Daftarkan kos</a></div>
+    </div>
+  </nav>
+  <main class="app-main">
+    <div class="container" style="max-width:860px">
+      <div class="demo-banner">BeresKos dibuka bertahap di <span data-area></span>. Langganan aktif setelah dikonfirmasi tim lewat WhatsApp.</div>
+
+      <section id="join" class="hidden">
+        <div class="card">
+          <h2>Atur langganan kamarmu</h2>
+          <p class="muted">Simpan data kamar untuk melihat jadwal empat minggu ke depan dan mengirim permintaan langganan.</p>
+          <form id="f">
+            <div class="field-row">
+              <div class="field"><label for="m-nama">Nama</label><input id="m-nama" required></div>
+              <div class="field"><label for="m-hp">No. WhatsApp</label><input id="m-hp" required inputmode="tel" placeholder="0812..."></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="m-kos">Nama kos</label><input id="m-kos" required></div>
+              <div class="field"><label for="m-kamar">Nomor kamar</label><input id="m-kamar" required></div>
+            </div>
+            <div class="field">
+              <label for="m-waktu">Waktu bersih kamar yang kamu pilih</label>
+              <select id="m-waktu"><option>Pagi (08.00–11.00)</option><option>Siang (11.00–14.00)</option><option>Sore (15.00–18.00)</option></select>
+            </div>
+            <button class="btn btn-primary" type="submit">Simpan dan lihat jadwal</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="dash" class="hidden">
+        <div class="panel-title">
+          <div><h2 id="hello">Jadwalmu</h2><div class="small muted" id="who"></div></div>
+          <button class="btn btn-ghost btn-sm" id="edit">Ubah data</button>
+        </div>
+
+        <div class="grid grid-2" style="align-items:start">
+          <div class="card">
+            <h3>Minggu ini</h3>
+            <div class="week" id="week" style="margin-top:12px"></div>
+            <div class="week-legend">🧺 Jemput cucian · 👕 Antar cucian · 🧹 Bersih kamar</div>
+            <div style="height:18px"></div>
+            <div class="timeline" id="timeline"></div>
+          </div>
+          <div class="card">
+            <h3>Status langganan</h3>
+            <div class="row-item" style="margin:8px 0"><span>Paket</span><b><span data-harga></span> / minggu</b></div>
+            <div class="row-item" style="margin:8px 0"><span>Kuota laundry</span><b><span data-kg></span> kg / minggu</b></div>
+            <div class="row-item" style="margin:8px 0"><span>Status</span><span class="badge warn" id="status">Menunggu konfirmasi</span></div>
+            <button class="btn btn-wa btn-block" id="subscribe" style="margin-top:12px">Kirim permintaan langganan</button>
+          </div>
+        </div>
+
+        <h3 style="margin-top:28px">Empat minggu ke depan</h3>
+        <div class="list" id="weeks"></div>
+      </section>
+    </div>
+  </main>
+  <script src="config.js"></script>
+  <script src="../_shared/kit.js"></script>
+  <script src="shared.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

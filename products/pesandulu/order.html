@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Pesanan</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../_shared/base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-shell">
+  <main class="app-main">
+    <div class="container" style="max-width:640px">
+      <div id="invalid" class="empty hidden">
+        <h2>Link pesanan tidak valid</h2>
+        <p>Minta link terbaru ke penjual, atau <a href="./">buat link PO-mu sendiri dengan PesanDulu</a>.</p>
+      </div>
+
+      <form id="order" class="hidden">
+        <div class="card" style="margin-bottom:16px">
+          <span class="eyebrow" id="o-batch">PO</span>
+          <h1 style="font-size:1.7rem" id="o-toko"></h1>
+          <p class="muted" id="o-info" style="margin:0"></p>
+        </div>
+
+        <h3>Pilih menu</h3>
+        <div class="list" id="o-menu"></div>
+
+        <h3 style="margin-top:24px">Data pemesan</h3>
+        <div class="card">
+          <div class="field"><label for="o-nama">Nama</label><input id="o-nama" required maxlength="60"></div>
+          <div class="field"><label for="o-hp">No. WhatsApp</label><input id="o-hp" inputmode="tel" required placeholder="0812..."></div>
+          <div class="field"><label for="o-tgl">Tanggal kirim atau ambil</label><select id="o-tgl" required></select></div>
+          <div class="field"><label for="o-alamat">Alamat kirim (kosongkan bila ambil sendiri)</label><textarea id="o-alamat" style="min-height:70px"></textarea></div>
+          <div class="field" style="margin:0"><label for="o-cat">Catatan</label><input id="o-cat" maxlength="160" placeholder="Contoh: tanpa kacang"></div>
+        </div>
+
+        <div class="total-bar">
+          <div class="row-item" style="margin-bottom:10px"><span class="muted">Total</span><b style="font-size:1.4rem" id="o-total">Rp0</b></div>
+          <button class="btn btn-wa btn-block btn-lg" type="submit">Kirim pesanan lewat WhatsApp</button>
+        </div>
+        <p class="center small muted" style="margin-top:14px">Form pesanan dibuat dengan <a href="./">PesanDulu</a></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="../_shared/kit.js"></script>
+  <script src="order.js"></script>
+</body>
+</html>

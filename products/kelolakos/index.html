@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KelolaKos: Aplikasi Manajemen Kos</title>
+  <meta name="description" content="Kelola kamar, penghuni, tagihan bulanan, pengingat WhatsApp, dan laporan pemasukan kos dalam satu aplikasi web.">
+  <meta property="og:title" content="KelolaKos: Aplikasi Manajemen Kos">
+  <meta property="og:description" content="Tagihan kos beres tanpa buku catatan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../_shared/base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <a class="logo" href="./"><span class="logo-mark">K</span>KelolaKos</a>
+      <div class="nav-links">
+        <a href="#fitur">Fitur</a>
+        <a href="#harga">Harga</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary btn-sm" href="app.html">Coba gratis</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Untuk pemilik kos dan kontrakan</span>
+        <h1>Tagihan kos beres, tanpa buku catatan.</h1>
+        <p class="lead">Catat kamar dan penghuni, buat tagihan bulanan dengan sekali klik, kirim pengingat lewat WhatsApp, dan lihat pemasukan tiap bulan dalam satu aplikasi web.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="app.html" data-cta="hero">Coba gratis sekarang</a>
+          <a class="btn btn-ghost btn-lg" href="#fitur">Lihat fitur</a>
+        </div>
+        <p class="hero-note">Bisa langsung dipakai di HP atau laptop. Tidak perlu pasang aplikasi.</p>
+      </div>
+      <div class="mock-app" aria-hidden="true">
+        <div class="bar"><span>Kos Melati, November</span><span>9/10 terisi</span></div>
+        <div class="body">
+          <div class="grid grid-2" style="gap:10px">
+            <div class="kpi"><span>Sudah dibayar</span><b>Rp7.200.000</b></div>
+            <div class="kpi"><span>Belum dibayar</span><b style="color:var(--bad)">Rp1.800.000</b></div>
+          </div>
+          <div class="mock-row"><span><b>Kamar 03</b> · Dinda</span><span class="badge ok">Lunas</span></div>
+          <div class="mock-row"><span><b>Kamar 07</b> · Fajar</span><span class="badge bad">Jatuh tempo</span></div>
+          <div class="mock-row"><span><b>Kamar 08</b> · Salsa</span><span class="badge warn">Belum bayar</span></div>
+          <div class="btn btn-wa btn-sm" style="justify-self:start">Kirim pengingat WhatsApp</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Masalahnya</span>
+        <h2>Mengurus kos masih serba manual</h2>
+        <p class="muted">Data penghuni ada di buku, bukti transfer tersebar di chat, dan pemilik harus mengingat sendiri siapa yang belum bayar. Akibatnya tagihan terlewat dan pemasukan sulit dihitung.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="fitur">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Fitur</span>
+        <h2>Semua yang dibutuhkan untuk mengelola kos</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card"><div class="icon-bubble">🏠</div><h3>Data kamar</h3><p class="muted">Nomor kamar, harga sewa, fasilitas, dan status terisi atau kosong.</p></div>
+        <div class="card"><div class="icon-bubble">👥</div><h3>Data penghuni</h3><p class="muted">Nama, nomor HP, tanggal masuk, deposit, dan riwayat penghuni yang sudah keluar.</p></div>
+        <div class="card"><div class="icon-bubble">🧾</div><h3>Tagihan otomatis</h3><p class="muted">Tagihan bulanan dibuat untuk semua penghuni aktif dengan sekali klik, lengkap dengan jatuh tempo.</p></div>
+        <div class="card"><div class="icon-bubble">💬</div><h3>Pengingat WhatsApp</h3><p class="muted">Pesan pengingat berisi nominal, jatuh tempo, dan rekening langsung terbuka di WhatsApp penghuni.</p></div>
+        <div class="card"><div class="icon-bubble">✅</div><h3>Catat pembayaran</h3><p class="muted">Tandai lunas, simpan tanggal dan metode bayar, lalu kirim kuitansi lewat WhatsApp.</p></div>
+        <div class="card"><div class="icon-bubble">📊</div><h3>Laporan keuangan</h3><p class="muted">Grafik pemasukan per bulan dan unduhan data ke Excel (CSV).</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Cara mulai</span><h2>Siap dipakai dalam 10 menit</h2></div>
+      <div class="grid grid-3">
+        <div class="card"><div class="step-num">1</div><h3>Isi data kos</h3><p class="muted">Nama kos, tanggal jatuh tempo, dan rekening pembayaran.</p></div>
+        <div class="card"><div class="step-num">2</div><h3>Masukkan kamar dan penghuni</h3><p class="muted">Tambahkan kamar beserta harga sewanya, lalu daftarkan penghuni di tiap kamar.</p></div>
+        <div class="card"><div class="step-num">3</div><h3>Buat tagihan tiap bulan</h3><p class="muted">Klik "Buat tagihan", kirim pengingat, dan tandai lunas saat transfer masuk.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="harga">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Harga</span>
+        <h2>Gratis selama masa uji coba</h2>
+        <p class="muted">Kami sedang menguji KelolaKos bersama pemilik kos di Semarang. Daftar early access untuk mendapat pendampingan pengisian data dan harga khusus saat paket berlangganan dibuka.</p>
+      </div>
+      <div class="grid grid-2" style="max-width:820px;margin:0 auto">
+        <div class="card price-card">
+          <h3>Uji Coba</h3>
+          <div class="price">Gratis</div>
+          <ul class="check-list">
+            <li>Semua fitur tanpa batas kamar</li>
+            <li>Data tersimpan di perangkatmu</li>
+            <li>Cadangan data dalam satu file</li>
+          </ul>
+          <a class="btn btn-ghost btn-block" href="app.html">Mulai sekarang</a>
+        </div>
+        <div class="card price-card featured">
+          <span class="badge" style="align-self:flex-start">Early access</span>
+          <h3 style="margin-top:10px">Dibantu Tim</h3>
+          <div class="price">Gratis <span>saat uji coba</span></div>
+          <ul class="check-list">
+            <li>Tim membantu memasukkan data kamar dan penghuni</li>
+            <li>Harga khusus saat paket berlangganan dibuka</li>
+            <li>Ikut menentukan fitur berikutnya</li>
+          </ul>
+          <button class="btn btn-primary btn-block" data-event="Lead" data-cta="harga-early" data-wa="Halo KelolaKos, saya pemilik kos dan tertarik ikut early access. Nama kos: ... Jumlah kamar: ... Lokasi: ...">Daftar lewat WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="faq">
+    <div class="container" style="max-width:760px">
+      <div class="section-head"><h2>Pertanyaan yang sering muncul</h2></div>
+      <div class="faq">
+        <details><summary>Data saya disimpan di mana?</summary><p>Pada versi uji coba, data tersimpan di browser perangkat yang kamu pakai. Gunakan menu Pengaturan untuk mengunduh cadangan data dan memindahkannya ke perangkat lain.</p></details>
+        <details><summary>Apakah penghuni perlu memasang aplikasi?</summary><p>Tidak. Penghuni menerima pengingat dan kuitansi lewat WhatsApp seperti pesan biasa.</p></details>
+        <details><summary>Bisa untuk kontrakan atau lebih dari satu kos?</summary><p>Bisa untuk kontrakan. Untuk beberapa kos sekaligus, saat ini satu kos dikelola di satu browser. Ceritakan kebutuhanmu lewat WhatsApp supaya kami prioritaskan.</p></details>
+        <details><summary>Apakah ada biaya tersembunyi?</summary><p>Tidak. Selama masa uji coba semua fitur gratis. Harga berlangganan akan diumumkan lebih dulu sebelum berlaku.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Bulan depan, tagihan kos tidak perlu dicatat di buku lagi</h2>
+        <p>Coba sekarang dengan data contoh, lalu isi data kosmu sendiri.</p>
+        <a class="btn btn-primary btn-lg" href="app.html" data-cta="footer">Coba gratis</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© <span data-year></span> KelolaKos, produk Kelompok 7 Lab Pemrograman, Bisnis Digital Undip.</span>
+      <a href="../../">Produk lain dari Kelompok 7</a>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="../_shared/kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KelolaKos: Dasbor</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../_shared/base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-shell">
+  <nav class="nav">
+    <div class="container">
+      <a class="logo" href="./"><span class="logo-mark">K</span><span id="kos-name">KelolaKos</span></a>
+      <div class="nav-links"><button class="btn btn-soft btn-sm" data-cta="app-help" data-wa="Halo KelolaKos, saya butuh bantuan memakai aplikasinya: ...">Bantuan</button></div>
+    </div>
+  </nav>
+
+  <main class="app-main">
+    <div class="container">
+      <div class="demo-banner">Data tersimpan di browser perangkat ini. Unduh cadangan secara berkala lewat menu Pengaturan.</div>
+
+      <section id="setup" class="hidden">
+        <div class="card" style="max-width:620px;margin:0 auto">
+          <h2>Mulai kelola kosmu</h2>
+          <p class="muted">Isi data kos, atau coba dulu dengan data contoh.</p>
+          <form id="setup-form">
+            <div class="field"><label for="k-nama">Nama kos</label><input id="k-nama" name="nama" required placeholder="Kos Melati"></div>
+            <div class="field"><label for="k-alamat">Alamat</label><input id="k-alamat" name="alamat" placeholder="Jl. Banjarsari, Tembalang"></div>
+            <div class="field-row">
+              <div class="field"><label for="k-tempo">Jatuh tempo tiap tanggal</label><input id="k-tempo" name="tempo" type="number" min="1" max="28" value="5" required></div>
+              <div class="field"><label for="k-wa">No. WhatsApp pemilik</label><input id="k-wa" name="wa" inputmode="tel" placeholder="0812..."></div>
+            </div>
+            <div class="field"><label for="k-rek">Info rekening pembayaran</label><input id="k-rek" name="rekening" placeholder="BCA 1234567890 a.n. Budi Santoso"></div>
+            <div class="btn-row">
+              <button class="btn btn-primary" type="submit">Simpan dan mulai</button>
+              <button class="btn btn-ghost" type="button" id="use-sample">Coba dengan data contoh</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="app" class="hidden">
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="ringkasan">Ringkasan</button>
+          <button class="tab" data-tab="tagihan">Tagihan</button>
+          <button class="tab" data-tab="kamar">Kamar</button>
+          <button class="tab" data-tab="penghuni">Penghuni</button>
+          <button class="tab" data-tab="laporan">Laporan</button>
+          <button class="tab" data-tab="pengaturan">Pengaturan</button>
+        </div>
+        <div id="panel"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="../_shared/kit.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

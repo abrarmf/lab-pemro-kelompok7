@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PesanDulu: Dasbor Penjual</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../_shared/base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-shell">
+  <nav class="nav">
+    <div class="container">
+      <a class="logo" href="./"><span class="logo-mark">P</span><span id="toko-name">PesanDulu</span></a>
+      <div class="nav-links"><button class="btn btn-soft btn-sm" data-cta="app-help" data-wa="Halo PesanDulu, saya butuh bantuan memakai aplikasinya: ...">Bantuan</button></div>
+    </div>
+  </nav>
+  <main class="app-main">
+    <div class="container">
+      <div class="demo-banner">Data pesanan tersimpan di browser perangkat ini. Unduh rekap secara berkala.</div>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="toko">1. Toko & menu</button>
+        <button class="tab" data-tab="link">2. Link pesanan</button>
+        <button class="tab" data-tab="pesanan">3. Pesanan</button>
+        <button class="tab" data-tab="rekap">4. Rekap</button>
+      </div>
+      <div id="panel"></div>
+    </div>
+  </main>
+  <script src="config.js"></script>
+  <script src="../_shared/kit.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
