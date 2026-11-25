@@ -2,7 +2,7 @@
 window.CONFIG = {
   product: "Responin",
   /* Nomor WhatsApp tim dengan kode negara, tanpa tanda +. Contoh: "6281234567890" */
-  waNumber: "",
+  waNumber: "08126111055",
   /* ID Meta Pixel dan Google Analytics 4. Kosongkan bila belum dipakai. */
   metaPixelId: "",
   ga4Id: "",
