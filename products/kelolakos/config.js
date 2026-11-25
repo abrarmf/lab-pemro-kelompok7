@@ -2,7 +2,7 @@
 window.CONFIG = {
   product: "KelolaKos",
   /* Nomor WhatsApp tim dengan kode negara, tanpa tanda +. Contoh: "6281234567890" */
-  waNumber: "",
+  waNumber: "08126111055",
   metaPixelId: "",
   ga4Id: ""
 };
